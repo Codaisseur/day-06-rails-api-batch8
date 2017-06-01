@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   resources :rooms do
     resources :bookings, only: [:create]
   end
+
+  namespace :api do
+    resources :rooms
+  end
 end
